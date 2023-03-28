@@ -16,29 +16,25 @@ function add_favicon() {
             var counter = 1;
             const NumberOfPics = ' . $num_of_pics . ';
             var nodeFavicon = document.getElementsByTagName("link");
-
             function animateFavicon() {
                 for (var i = 0; i < nodeFavicon.length; i++) {
                     if (nodeFavicon[i].getAttribute("rel") == "icon" || nodeFavicon[i].getAttribute("rel") == "shortcut icon") {
                         nodeFavicon[i].setAttribute("href", "' . $template_directory_uri . '/favicon-" + counter + ".' . $file_extension . '");
                     }
                 }
-
                 if (counter < NumberOfPics) {
                     setTimeout(animateFavicon, ' . get_option('animated_favicon_timeout', 3000) . ');
                     counter++;
-
                     if (counter == NumberOfPics) {
                         counter = 1;
                     }
                 }
             }
-
             animateFavicon();
         </script>';
 }
 
-add_action( 'wp_head', 'add_favicon' );
+add_action('wp_head', 'add_favicon');
 
 function animated_favicon_settings_init() {
     add_settings_section(
@@ -102,6 +98,7 @@ function animated_favicon_settings_init() {
         )
     );
 }
+
 function animated_favicon_admin_menu() {
     add_options_page(
         'Animated Favicon Settings',
@@ -128,3 +125,108 @@ function animated_favicon_options_page() {
 }
 
 add_action('admin_menu', 'animated_favicon_admin_menu');
+
+function animated_favicon_settings_section_callback() {
+    echo '<p>Customize the animated favicon settings</p>';
+}
+
+function animated_favicon_number_of_pics_callback() {
+    $value = get_option('animated_favicon_number_of_pics', 6);
+    echo '<input type="number" name="animated_favicon_number_of_pics" value="' . esc_attr($value) . '">';
+}
+
+function animated_favicon_timeout_callback() {
+    $value = get_option('animated_favicon_timeout', 3000);
+    echo '<input type="number" name="animated_favicon_timeout" value="' . esc_attr($value) . '">';
+}
+
+function animated_favicon_file_extension_callback() {
+    $value = get_option('animated_favicon_file_extension', 'svg');
+    echo '<input type="text" name="animated_favicon_file_extension" value="' . esc_attr($value) . '">';
+}
+
+function sanitize_file_extension($input) {
+    if (!preg_match('/^\w+$/', $input)) {
+        add_settings_error(
+            'animated_favicon_file_extension',
+            'invalid_file_extension',
+            'File extension should only contain letters, numbers and underscores.'
+        );
+        return get_option('animated_favicon_file_extension');
+    }
+    return $input;
+}
+
+function animated_favicon_settings_init() {
+    add_settings_section(
+        'animated_favicon_settings_section',
+        'Animated Favicon Settings',
+        'animated_favicon_settings_section_callback',
+        'animated_favicon'
+    );
+
+    add_settings_field(
+        'animated_favicon_number_of_pics',
+        'Number of Pics',
+        'animated_favicon_number_of_pics_callback',
+        'animated_favicon',
+        'animated_favicon_settings_section'
+    );
+
+    add_settings_field(
+        'animated_favicon_timeout',
+        'Timeout (in ms)',
+        'animated_favicon_timeout_callback',
+        'animated_favicon',
+        'animated_favicon_settings_section'
+    );
+
+    add_settings_field(
+        'animated_favicon_file_extension',
+        'File Extension',
+        'animated_favicon_file_extension_callback',
+        'animated_favicon',
+        'animated_favicon_settings_section'
+    );
+
+    register_setting(
+        'animated_favicon_settings_group',
+        'animated_favicon_number_of_pics',
+        array(
+            'type' => 'integer',
+            'sanitize_callback' => 'absint',
+            'default' => 6
+        )
+    );
+
+    register_setting(
+        'animated_favicon_settings_group',
+        'animated_favicon_timeout',
+        array(
+            'type' => 'integer',
+            'sanitize_callback' => 'absint',
+            'default' => 3000
+        )
+    );
+
+    register_setting(
+        'animated_favicon_settings_group',
+        'animated_favicon_file_extension',
+        array(
+            'type' => 'string',
+            'sanitize_callback' => 'sanitize_file_extension',
+            'default' => 'svg'
+        )
+    );
+}
+
+add_action('admin_init', 'animated_favicon_settings_init');
+add_action('admin_menu', 'animated_favicon_admin_menu');
+
+function sanitize_file_extension($input) {
+    $allowed_extensions = array('ico', 'png', 'gif', 'svg');
+    if (in_array($input, $allowed_extensions)) {
+        return $input;
+    }
+    return 'svg';
+}
