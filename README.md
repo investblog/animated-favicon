@@ -43,3 +43,22 @@ We welcome contributions to Animated Favicon Plugin. Please feel free to open a 
 ## License
 
 Animated Favicon Plugin is licensed under the GPL-2.0+ License.
+
+### Example: Creating an animated favicon with Figma
+
+1. Open Figma and create a new project.
+
+2. Create a square Frame for each frame of your animation. It's recommended to use a 32x32 or 64x64 pixels size to keep the images sharp on different devices. Create as many frames as needed for your animation.
+
+3. Arrange the frames in a single row or column to make exporting easier.
+
+4. Draw or import elements on each frame, creating a sequence of frames for the animation. Ensure that there's only one icon per frame.
+
+5. Select all the frames, then go to the "Export" menu in the bottom-right corner of the Figma panel. Here you can choose the file format for exporting (SVG is recommended, but ICO, PNG, and GIF are also available).
+
+6. Click the "Export Selected" button to save all animation frames as separate files. Make sure the filenames match the format specified in your plugin code (e.g., favicon-1.svg, favicon-2.svg, etc.).
+
+7. After saving all the favicon files, upload them to your WordPress theme's directory. This is usually located at `/wp-content/themes/your-theme/`. Replace "your-theme" with the name of the active theme on your site.
+
+Now that you've created the animation in Figma and placed the favicon files in the correct folder, your plugin should work and display the animated favicon on your site. If you encounter any issues, please let me know, and I'll help you troubleshoot.
+
