@@ -3,8 +3,8 @@ Contributors: [Invest Blog]
 Donate link: [https://investblog.io/advertise/]
 Tags: WordPress, favicon, animation
 Requires at least: 4.0
-Tested up to: 5.9.1
-Stable tag: 1.0.0
+Tested up to: 6.1.1
+Stable tag: 1.1.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
