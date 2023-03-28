@@ -30,7 +30,7 @@ You can use any image format for the icons as long as the file extension is incl
 
 ## Contributing
 
-We welcome contributions to Animated Favicon Plugin. Please feel free to open a pull request or issue on the [GitHub repository](https://github.com/your-username/animated-favicon-plugin).
+We welcome contributions to Animated Favicon Plugin. Please feel free to open a pull request or issue on the [GitHub repository](https://github.com/your-username/animated-favicon).
 
 ## Changelog
 
