@@ -110,3 +110,52 @@ function sanitize_file_extension($input) {
     }
     return 'svg';
 }
+
+function animated_favicon_admin_menu() {
+    add_options_page(
+        'Animated Favicon Settings',
+        'Animated Favicon',
+        'manage_options',
+        'animated_favicon',
+        'animated_favicon_options_page'
+    );
+}
+
+function animated_favicon_options_page() {
+    ?>
+    <div class="wrap">
+        <h1>Animated Favicon Settings</h1>
+        <form action="options.php" method="post">
+            <?php
+            settings_fields('animated_favicon_settings_group');
+            do_settings_sections('animated_favicon');
+            submit_button();
+            ?>
+        </form>
+    </div>
+    <?php
+}
+
+function animated_favicon_settings_section_callback() {
+    echo '<p>Configure the settings for the Animated Favicon plugin.</p>';
+}
+
+function animated_favicon_number_of_pics_callback() {
+    $num_of_pics = get_option('animated_favicon_number_of_pics', 6);
+    echo '<input type="number" name="animated_favicon_number_of_pics" value="' . $num_of_pics . '" min="1" max="100" step="1">';
+}
+
+function animated_favicon_timeout_callback() {
+    $timeout = get_option('animated_favicon_timeout', 3000);
+    echo '<input type="number" name="animated_favicon_timeout" value="' . $timeout . '" min="100" max="60000" step="100">';
+}
+
+function animated_favicon_file_extension_callback() {
+    $file_extension = get_option('animated_favicon_file_extension', 'svg');
+    echo '<select name="animated_favicon_file_extension">
+            <option value="ico"' . selected($file_extension, 'ico', false) . '>ico</option>
+            <option value="png"' . selected($file_extension, 'png', false) . '>png</option>
+            <option value="gif"' . selected($file_extension, 'gif', false) . '>gif</option>
+            <option value="svg"' . selected($file_extension, 'svg', false) . '>svg</option>
+          </select>';
+}
