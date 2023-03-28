@@ -56,7 +56,7 @@ Animated Favicon Plugin is licensed under the GPL-2.0+ License.
 
 5. Select all the frames, then go to the "Export" menu in the bottom-right corner of the Figma panel. Here you can choose the file format for exporting (SVG is recommended, but ICO, PNG, and GIF are also available).
 
-6. Click the "Export Selected" button to save all animation frames as separate files. Make sure the filenames match the format specified in your plugin code (e.g., favicon-1.svg, favicon-2.svg, etc.).
+6. Click the "Export Selected" button to save all animation frames as separate files. Make sure the filenames match the format specified in plugin code (e.g., favicon-1.svg, favicon-2.svg, etc.).
 
 7. After saving all the favicon files, upload them to your WordPress theme's directory. This is usually located at `/wp-content/themes/your-theme/`. Replace "your-theme" with the name of the active theme on your site.
 
