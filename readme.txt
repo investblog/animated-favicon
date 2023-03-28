@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
 == Description ==
 
-Animated Favicon Plugin adds an animated favicon to your WordPress site. It switches between multiple images at set intervals and is easy to install and configure. The plugin assumes icons are located in the active theme's `/favicon` directory and is licensed under the GPL-2.0+ License.
+Animated Favicon Plugin adds an animated favicon to your WordPress site. It switches between multiple images at set intervals and is easy to install and configure. The plugin assumes icons are located in the active theme's directory and is licensed under the GPL-2.0+ License.
 
 The plugin includes a settings page where you can adjust the number of images in the animation, the timeout between image switches, and the file extension of the icons. The file extension should be included in the filename of each icon, for example, `favicon-1.svg`, `favicon-2.svg`, etc.
 
@@ -32,7 +32,7 @@ You can change the frequency of image switching on the settings page.
 
 ### What image formats can be used for the icons?
 
-You can use any image format for the icons as long as the file extension is included in the filename. The icons should be named `favicon-1`, `favicon-2`, etc. and located in the active theme's `/favicon` directory.
+You can use any image format for the icons as long as the file extension is included in the filename. The icons should be named `favicon-1`, `favicon-2`, etc. and located in the active theme's directory.
 
 == Example ==
 
