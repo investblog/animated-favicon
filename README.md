@@ -52,6 +52,8 @@ Animated Favicon Plugin is licensed under the GPL-2.0+ License.
 
 3. Arrange the frames in a single row or column to make exporting easier.
 
+![Icons](/preview.png)
+
 4. Draw or import elements on each frame, creating a sequence of frames for the animation. Ensure that there's only one icon per frame.
 
 5. Select all the frames, then go to the "Export" menu in the bottom-right corner of the Figma panel. Here you can choose the file format for exporting (SVG is recommended, but ICO, PNG, and GIF are also available).
