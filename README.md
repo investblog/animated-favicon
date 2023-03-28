@@ -32,7 +32,7 @@ The plugin assumes that the icons for the animation are located in the active th
 
 ## Contributing
 
-We welcome contributions to Animated Favicon Plugin. Please feel free to open a pull request or issue on the [GitHub repository](https://github.com/your-username/animated-favicon-plugin).
+We welcome contributions to Animated Favicon Plugin. Please feel free to open a pull request or issue on the [GitHub repository](https://github.com/your-username/animated-favicon).
 
 ## License
 
