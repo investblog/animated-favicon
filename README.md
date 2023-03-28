@@ -1,6 +1,6 @@
 # Animated Favicon Plugin
 
-Animated Favicon Plugin adds an animated favicon to your WordPress site. It switches between multiple images at set intervals and is easy to install and configure. The plugin assumes icons are located in the active theme's `/favicon` directory and is licensed under the GPL-2.0+ License.
+Animated Favicon Plugin adds an animated favicon to your WordPress site. It switches between multiple images at set intervals and is easy to install and configure. The plugin assumes icons are located in the active theme's directory and is licensed under the GPL-2.0+ License.
 
 The plugin includes a settings page where you can adjust the number of images in the animation, the timeout between image switches, and the file extension of the icons. The file extension should be included in the filename of each icon, for example, `favicon-1.svg`, `favicon-2.svg`, etc.
 
