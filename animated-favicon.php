@@ -100,3 +100,5 @@ function animated_favicon_settings_init() {
             'sanitize_callback' => 'sanitize_file_extension',
             'default' => 'svg'
         )
+    );
+}
