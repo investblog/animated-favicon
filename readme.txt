@@ -1,5 +1,5 @@
 === Animated Favicon Plugin ===
-Contributors: [Alex Smirnfoff]
+Contributors: [Invest Blog]
 Donate link: [https://investblog.io/advertise/]
 Tags: WordPress, favicon, animation
 Requires at least: 4.0
