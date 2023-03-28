@@ -3,7 +3,7 @@
  * Plugin Name: Animated Favicon Plugin
  * Plugin URI: https://github.com/investblog/animated-favicon/
  * Description: Adds an animated favicon to your WordPress website
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Invest Blog
  * Author URI: https://investblog.io
  */
