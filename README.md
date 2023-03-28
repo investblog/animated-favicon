@@ -1,6 +1,8 @@
-# Animated Favicon Wordpress Plugin
+# Animated Favicon Plugin
 
 Animated Favicon Plugin adds an animated favicon to your WordPress site. It switches between multiple images at set intervals and is easy to install and configure. The plugin assumes icons are located in the active theme's `/favicon` directory and is licensed under the GPL-2.0+ License.
+
+The plugin includes a settings page where you can adjust the number of images in the animation, the timeout between image switches, and the file extension of the icons. The file extension should be included in the filename of each icon, for example, `favicon-1.svg`, `favicon-2.svg`, etc.
 
 ## Installation
 
@@ -16,23 +18,27 @@ To see Animated Favicon Plugin in action, please visit [investblog.io](https://i
 
 ### How can I change the number of images in the animation?
 
-To change the number of images in the animation, modify the value of the `NumberOfPics` constant in the JavaScript code of the plugin.
+You can change the number of images in the animation on the settings page.
 
 ### How can I change the frequency of image switching?
 
-To change the frequency of image switching, modify the value of the `setTimeout()` function in the JavaScript code of the plugin.
+You can change the frequency of image switching on the settings page.
 
 ### What image formats can be used for the icons?
 
-By default, the plugin expects the icons to be in SVG format. However, other image formats can be used as well. To use a different image format, modify the `animateFavicon()` JavaScript function in the plugin code.
-
-### Where should the icons be located?
-
-The plugin assumes that the icons for the animation are located in the active theme directory under the `/favicon` directory.
+You can use any image format for the icons as long as the file extension is included in the filename. The icons should be named `favicon-1`, `favicon-2`, etc. and located in the active theme's `/favicon` directory.
 
 ## Contributing
 
-We welcome contributions to Animated Favicon Plugin. Please feel free to open a pull request or issue on the [GitHub repository](https://github.com/your-username/animated-favicon).
+We welcome contributions to Animated Favicon Plugin. Please feel free to open a pull request or issue on the [GitHub repository](https://github.com/your-username/animated-favicon-plugin).
+
+## Changelog
+
+### 1.1.0
+- Added settings page to adjust number of images, timeout, and file extension
+
+### 1.0.0
+- Initial release
 
 ## License
 
