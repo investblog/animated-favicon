@@ -26,7 +26,7 @@ You can change the frequency of image switching on the settings page.
 
 ### What image formats can be used for the icons?
 
-You can use any image format for the icons as long as the file extension is included in the filename. The icons should be named `favicon-1`, `favicon-2`, etc. and located in the active theme's `/favicon` directory.
+You can use any image format for the icons as long as the file extension is included in the filename. The icons should be named `favicon-1`, `favicon-2`, etc. and located in the active theme's directory. This is usually located at `/wp-content/themes/your-theme/`. Replace "your-theme" with the name of the active theme on your site.
 
 ## Contributing
 
