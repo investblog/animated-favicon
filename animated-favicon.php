@@ -102,3 +102,29 @@ function animated_favicon_settings_init() {
         )
     );
 }
+function animated_favicon_admin_menu() {
+    add_options_page(
+        'Animated Favicon Settings',
+        'Animated Favicon',
+        'manage_options',
+        'animated_favicon',
+        'animated_favicon_options_page'
+    );
+}
+
+function animated_favicon_options_page() {
+    ?>
+    <div class="wrap">
+        <h2>Animated Favicon Settings</h2>
+        <form method="post" action="options.php">
+            <?php
+            settings_fields('animated_favicon_settings_group');
+            do_settings_sections('animated_favicon');
+            submit_button();
+            ?>
+        </form>
+    </div>
+    <?php
+}
+
+add_action('admin_menu', 'animated_favicon_admin_menu');
